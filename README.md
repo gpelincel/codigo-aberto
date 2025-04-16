@@ -59,7 +59,7 @@ Siga os passos abaixo para rodar o projeto localmente:
 1. **Clone o repositório**
 
 ```bash
-git clone https://github.com/seu-usuario/codigo-aberto.git
+git clone https://github.com/gpelincel/codigo-aberto.git
 cd codigo-aberto
 ```
 
