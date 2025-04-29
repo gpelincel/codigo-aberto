@@ -1,11 +1,10 @@
 <?php
 
+use App\Http\Controllers\ProjetoController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/projetos', function () {
-    return view('projetos');
-});
+Route::get('/projetos', [ProjetoController::class, 'index']);
