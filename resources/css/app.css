@@ -1,4 +1,4 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
 @source '../../storage/framework/views/*.php';
@@ -6,6 +6,19 @@
 @source '../**/*.js';
 
 @theme {
-    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-        'Segoe UI Symbol', 'Noto Color Emoji';
+    --font-sans: "Instrument Sans", ui-sans-serif, system-ui, sans-serif,
+        "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+        "Noto Color Emoji";
+
+    --color-ocean-900: #012e40;
+    --color-ocean-800: #024959;
+    --color-ocean-700: #026773;
+    --color-ocean-500: #3ca6a6;
+    --color-ocean-100: #f2e3d5;
+}
+
+.bg-hero{
+    background-image: url('./../../public/imgs/dev-team-blur.jpg');
+    background-position: center;
+    background-size: cover;
 }
