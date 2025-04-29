@@ -1,10 +1,10 @@
 <nav class="flex justify-between p-4 bg-ocean-900 text-white">
-    <div class="logo">
+    <a href="/" class="logo">
         <h1>{Código_Aberto}</h1>
-    </div>
+    </a>
     <ul class="flex gap-8">
         <li>Sobre Nós</li>
-        <li>Projetos</li>
+        <li><a href="/projetos">Projetos</a></li>
         <li>Voluntários</li>
         <li>FAQ</li>
         <li>Fale Conosco</li>

@@ -17,5 +17,6 @@
     <main class="bg-ocean-800">
         {{ $slot }}
     </main>
+    <x-footer></x-footer>
 </body>
 </html>
