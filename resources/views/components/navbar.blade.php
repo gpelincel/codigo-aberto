@@ -1,4 +1,4 @@
-<nav class="flex justify-between p-4 bg-ocean-900 text-white">
+<nav class="flex justify-between items-center bg-ocean-900 p-4 text-white">
     <a href="/" class="logo">
         <h1>{Código_Aberto}</h1>
     </a>
@@ -12,7 +12,7 @@
     </ul>
     <ul class="flex gap-3">
         <li>
-            <a class="bg-ocean-700 text-white py-2 px-4 rounded" href="">Inscreva-se</a>
+            <a class="bg-ocean-700 text-white py-2 px-4 rounded" href="/cadastro">Cadastre sua ONG</a>
         </li>
         <li>
             <a class="py-2 px-4" href="">Login</a>

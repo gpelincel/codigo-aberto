@@ -55,6 +55,6 @@ class ProjetoController extends Controller
         $projeto = Projeto::findOrFail($id);
         $projeto->delete();
 
-        return redirect()->back()->with('status', 'success')->with('message', 'projeto deletado com sucesso!');
+        return redirect()->back()->with('status', 'success')->with('message', 'Projeto deletado com sucesso!');
     }
 }

@@ -31,3 +31,11 @@ Route::get('/projetos', [ProjetoController::class, 'index']);
 Route::get('/projetos/{id}', [ProjetoController::class, 'show']);
 Route::post('/projetos', [ProjetoController::class, 'save']);
 Route::put('/projetos', [ProjetoController::class, 'update']);
+
+Route::get('/cadastro', function (){
+    return view('cadastro');
+});
+
+Route::get('/politica-privacidade', function (){
+    return view('politica-privacidade');
+});
