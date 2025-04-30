@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ONGController;
 use App\Http\Controllers\ProjetoController;
 use Illuminate\Support\Facades\Route;
 
@@ -35,6 +36,9 @@ Route::put('/projetos', [ProjetoController::class, 'update']);
 Route::get('/cadastro', function (){
     return view('cadastro');
 });
+
+Route::get('/ong/{id}', [ONGController::class, 'show']);
+Route::post('/ong', [ONGController::class, 'store']);
 
 Route::get('/politica-privacidade', function (){
     return view('politica-privacidade');

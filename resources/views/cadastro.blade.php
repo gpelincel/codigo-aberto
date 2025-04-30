@@ -43,7 +43,7 @@
 
                 <div class="text-white">
                     <label for="area_atuacao" class="text-sm text-gray-300">Área de Atuação</label>
-                    <select id="area_atuacao"
+                    <select id="area_atuacao" name="area_atuacao"
                         class="block py-2.5 px-0 w-full text-sm text-gray-500 bg-transparent border-0 border-b-1 border-gray-500 appearance-none focus:outline-none focus:ring-0 focus:border-gray-500 peer">
                         <option selected>- Selecione -</option>
                         <option value="educacao">Educação</option>

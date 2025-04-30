@@ -9,6 +9,7 @@ class Projeto extends Model
     protected $fillable = [
         'title',
         'description',
-        'content'
+        'content',
+        'id_ong'
     ];
 }
