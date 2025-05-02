@@ -10,12 +10,16 @@
         <li>Fale Conosco</li>
         <li>Doar</li>
     </ul>
-    <ul class="flex gap-3">
-        <li>
-            <a class="bg-ocean-700 text-white py-2 px-4 rounded" href="/cadastro">Cadastre sua ONG</a>
-        </li>
-        <li>
-            <a class="py-2 px-4" href="/login">Login</a>
-        </li>
-    </ul>
+    @if (!session('user_id'))
+        <ul class="flex gap-3">
+            <li>
+                <a class="bg-ocean-700 text-white py-2 px-4 rounded" href="/cadastro">Cadastre sua ONG</a>
+            </li>
+            <li>
+                <a class="py-2 px-4" href="/login">Login</a>
+            </li>
+        </ul>
+    @else
+        <x-navbar-dropdown></x-navbar-dropdown>
+    @endif
 </nav>

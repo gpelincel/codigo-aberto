@@ -10,10 +10,10 @@ class ONGController extends Controller
 {
     public function store(Request $request) {
         $request['senha'] = Hash::make($request['senha']);
-        
         $ong = ONG::create($request->all());
+        session(['user_id' => $ong->id]);
 
-        return redirect('/')->with('status', 'success')->with('message', 'ONG cadastrada com sucesso!');
+        return redirect('/ong/'.$ong->id)->with('status', 'success')->with('message', 'ONG cadastrada com sucesso!');
     }
 
     public function show(string $id) {
@@ -21,4 +21,16 @@ class ONGController extends Controller
 
         return view('ong-info', compact('ong'));
     }
+
+    public function login(Request $request) {
+        $usuario = ONG::where('email', $request['email'])->first();
+
+        if ($usuario && Hash::check($request['senha'], $usuario->senha)) {
+            session(['user_id' => $usuario->id]);
+            session(['username' => $usuario->nome]);
+            return redirect('/ong/'.$usuario->id)->with('status', 'success')->with('message', 'ONG cadastrada com sucesso!');
+        }
+    }
+
+    
 }

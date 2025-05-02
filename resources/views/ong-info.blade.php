@@ -33,8 +33,10 @@
             <div>
                 <div class="flex items-center gap-6 mb-4">
                     <h2 class="text-xl font-semibold">Redes Sociais</h2>
+                    @if (session('user_id'))
                     <button data-modal-target="modal-cad-rede"
                         class="flex bg-ocean-700 border-ocean-700 hover:bg-ocean-800 transition-colors rounded-lg py-2 px-4 cursor-pointer w-fit"><i class="fi fi-rs-plus-small mr-1 text-lg"></i> <span>Adicionar rede social</span></button>
+                    @endif
                 </div>
                 <div class="flex flex-wrap gap-4">
                     @foreach ($ong->social_medias as $rede_social)
@@ -46,8 +48,10 @@
             <div>
                 <div class="flex flex-col gap-2 mb-4">
                     <h2 class="text-xl font-semibold">Projetos Ativos</h2>
-                    <a href="/projeto/cadastrar"
+                    @if (session('user_id'))
+                    <a href="/cadastrar-projeto"
                         class="flex bg-ocean-700 border-ocean-700 hover:bg-ocean-800 transition-colors rounded-lg py-2 px-4 cursor-pointer w-fit"><i class="fi fi-rs-plus-small mr-1 text-lg"></i> <span>Adicionar projeto</span></a>
+                    @endif
                 </div>
                 <div class="flex flex-col items-center space-y-4">
                     @foreach ($ong->projetos as $projeto)

@@ -36,3 +36,19 @@ document.querySelectorAll(".modal").forEach((modal) => {
         }
     });
 });
+
+const userButton = document.getElementById("user-menu-button");
+const userDropdown = document.getElementById("user-dropdown");
+
+userButton.addEventListener("click", () => {
+    userDropdown.classList.toggle("hidden");
+});
+
+document.addEventListener("click", (event) => {
+    if (
+        !userButton.contains(event.target) &&
+        !userDropdown.contains(event.target)
+    ) {
+        userDropdown.classList.add("hidden");
+    }
+});

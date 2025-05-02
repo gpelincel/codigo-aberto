@@ -34,7 +34,7 @@
                     <trix-editor input="content" class="bg-white text-black rounded" placeholder="Insira todas as informações possíveis sobre o seu projeto..."></trix-editor>
                 </div>
 
-                <input type="text" id="id_ong" name="id_ong" value="1">
+                <input type="hidden" id="id_ong" name="id_ong" value="{{session('user_id')}}">
 
                 <div>
                     <button type="submit"

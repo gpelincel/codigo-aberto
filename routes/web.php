@@ -54,3 +54,8 @@ Route::get('/politica-privacidade', function (){
 });
 
 Route::get('/projeto/{id}', [ProjetoController::class, 'show']);
+
+Route::post('/logout', function (){
+    session()->forget('user_id');
+    return redirect('login');
+});
