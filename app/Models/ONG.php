@@ -12,6 +12,7 @@ class ONG extends Model
     protected $fillable = [
         'nome',
         'email',
+        'senha',
         'telefone',
         'area_atuacao',
         'descricao'

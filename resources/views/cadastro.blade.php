@@ -36,6 +36,12 @@
                 </div>
 
                 <div>
+                    <label for="senha" class="text-sm font-medium text-gray-300">Crie uma senha</label>
+                    <input type="password" name="senha" id="senha" required
+                        class="mt-1 w-full border-gray-500 border-b focus:outline-none">
+                </div>
+
+                <div>
                     <label for="telefone" class="text-sm font-medium text-gray-300">Telefone</label>
                     <input type="tel" name="telefone" id="telefone" required
                         class="mt-1 w-full border-gray-500 border-b focus:outline-none">

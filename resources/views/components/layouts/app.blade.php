@@ -11,6 +11,7 @@
         @if (file_exists(public_path('build/manifest.json')) || file_exists(public_path('hot')))
             @vite(['resources/css/app.css', 'resources/js/app.js'])
         @endif
+        @stack('styles')
     </head>
 <body>
     <x-navbar></x-navbar>
@@ -18,5 +19,7 @@
         {{ $slot }}
     </main>
     <x-footer></x-footer>
+    
+    @stack('scripts')
 </body>
 </html>

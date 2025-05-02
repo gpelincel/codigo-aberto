@@ -15,7 +15,7 @@
             <a class="bg-ocean-700 text-white py-2 px-4 rounded" href="/cadastro">Cadastre sua ONG</a>
         </li>
         <li>
-            <a class="py-2 px-4" href="">Login</a>
+            <a class="py-2 px-4" href="/login">Login</a>
         </li>
     </ul>
 </nav>

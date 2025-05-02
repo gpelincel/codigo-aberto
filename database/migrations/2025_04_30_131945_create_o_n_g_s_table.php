@@ -15,9 +15,10 @@ return new class extends Migration
             $table->id();
             $table->string('nome');
             $table->string('email');
+            $table->string('senha')->unique();
             $table->string('telefone');
             $table->string('area_atuacao');
-            $table->text('descricao');
+            $table->longText('descricao');
         });
     }
 

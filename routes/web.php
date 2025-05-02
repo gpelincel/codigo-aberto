@@ -30,8 +30,12 @@ Route::get('/doar', function () {
 
 Route::get('/projetos', [ProjetoController::class, 'index']);
 Route::get('/projetos/{id}', [ProjetoController::class, 'show']);
-Route::post('/projetos', [ProjetoController::class, 'save']);
+Route::post('/projetos', [ProjetoController::class, 'store']);
 Route::put('/projetos', [ProjetoController::class, 'update']);
+
+Route::get('/cadastrar-projeto', function (){
+    return view('cad-projeto');
+});
 
 Route::get('/cadastro', function (){
     return view('cadastro');
@@ -40,6 +44,13 @@ Route::get('/cadastro', function (){
 Route::get('/ong/{id}', [ONGController::class, 'show']);
 Route::post('/ong', [ONGController::class, 'store']);
 
+Route::get('/login', function (){
+    return view('login');
+});
+Route::post('/login', [ONGController::class, 'login']);
+
 Route::get('/politica-privacidade', function (){
     return view('politica-privacidade');
 });
+
+Route::get('/projeto/{id}', [ProjetoController::class, 'show']);

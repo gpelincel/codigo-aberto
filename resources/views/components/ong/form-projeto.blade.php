@@ -1,4 +1,5 @@
-<div id="modal-cad-projeto" class="modal fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-60 hidden">
+<div id="modal-cad-projeto"
+    class="modal fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-60 hidden">
     <div class="bg-gray-900 text-white rounded-lg w-full max-w-2xl p-6 relative">
 
         <!-- Botão fechar -->
@@ -26,11 +27,21 @@
                     class="mt-1 w-full border-gray-500 border rounded p-2 focus:outline-none">
             </div>
 
+            {{-- Estilos do Trix --}}
+            @push('styles')
+                <link rel="stylesheet" type="text/css" href="https://unpkg.com/trix@2.0.8/dist/trix.css">
+            @endpush
+
+            {{-- Scripts do Trix --}}
+            @push('scripts')
+                <script type="text/javascript" src="https://unpkg.com/trix@2.0.8/dist/trix.umd.min.js"></script>
+            @endpush
+
             <div>
                 <label for="content" class="text-sm font-medium text-gray-300">Conteúdo Detalhado</label>
-                <textarea name="content" id="content" rows="3" required
-                    class="mt-1 w-full border rounded p-2 border-gray-500 focus:outline-none"
-                    placeholder="Descreva o projeto com mais detalhes..."></textarea>
+                <input id="descricao" type="hidden" name="descricao"
+                    value="{{ old('descricao', $projeto->descricao ?? '') }}">
+                <trix-editor input="descricao"></trix-editor>
             </div>
 
             <div>

@@ -46,8 +46,8 @@
             <div>
                 <div class="flex flex-col gap-2 mb-4">
                     <h2 class="text-xl font-semibold">Projetos Ativos</h2>
-                    <button data-modal-target="modal-cad-projeto"
-                        class="flex bg-ocean-700 border-ocean-700 hover:bg-ocean-800 transition-colors rounded-lg py-2 px-4 cursor-pointer w-fit"><i class="fi fi-rs-plus-small mr-1 text-lg"></i> <span>Adicionar projeto</span></button>
+                    <a href="/projeto/cadastrar"
+                        class="flex bg-ocean-700 border-ocean-700 hover:bg-ocean-800 transition-colors rounded-lg py-2 px-4 cursor-pointer w-fit"><i class="fi fi-rs-plus-small mr-1 text-lg"></i> <span>Adicionar projeto</span></a>
                 </div>
                 <div class="flex flex-col items-center space-y-4">
                     @foreach ($ong->projetos as $projeto)

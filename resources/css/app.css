@@ -34,3 +34,54 @@
         #bc1888 100%
     );
 }
+
+.trix-button-group {
+    border: none !important;
+    background: #024959;
+    color: white !important;
+}
+
+/* Altera o fundo dos botões da toolbar */
+trix-toolbar .trix-button-group .trix-button {
+    border-radius: 0.375rem; /* rounded-md */
+    border: none !important;
+    color: white !important;
+}
+
+/* Efeito hover */
+trix-toolbar .trix-button-group .trix-button:hover {
+    background-color: #026773; /* Hover mais escuro */
+}
+
+/* Altera o fundo da toolbar inteira */
+trix-toolbar {
+    background-color: #1f2937; /* bg-gray-800 */
+    border: none;
+}
+
+trix-editor ul, .text-projeto ul {
+    list-style: disc !important;
+    list-style-position: inside !important;
+}
+
+trix-editor ol, .text-projeto ol{
+    list-style: decimal !important;
+    list-style-position: inside !important;
+}
+
+trix-editor h1, .text-projeto h1{
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.trix-input {
+    color: black !important;
+}
+
+trix-editor blockquote, .text-projeto blockquote{
+    border-left: 4px solid #ccc;
+    padding-left: 1em;
+    color: #555;
+    margin: 1em 0;
+    font-style: italic;
+}
