@@ -3,12 +3,11 @@
         <h1>{Código_Aberto}</h1>
     </a>
     <ul class="flex gap-8">
-        <li>Sobre Nós</li>
+        <li><a href="/sobre-nos">Sobre Nós</a></li>
         <li><a href="/projetos">Projetos</a></li>
-        <li>Voluntários</li>
-        <li>FAQ</li>
-        <li>Fale Conosco</li>
-        <li>Doar</li>
+        <li><a href="/voluntarios">Voluntários</a></li>
+        <li><a href="/faq">FAQ</a></li>
+        <li><a href="/fale-conosco">Fale Conosco</a></li>
     </ul>
     @if (!session('user_id'))
         <ul class="flex gap-3">

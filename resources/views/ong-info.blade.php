@@ -62,6 +62,4 @@
         </div>
 
     </section>
-
-    <x-ong.form-projeto></x-ong.form-projeto>
 </x-layouts.app>

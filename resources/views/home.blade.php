@@ -6,12 +6,12 @@
             <p class="mb-8 text-lg font-normal lg:text-xl sm:px-16 lg:px-48 text-gray-300">Ganhe experiência prática,
                 construa seu portfólio e aumente suas chances no mercado de trabalho.</p>
             <div class="flex gap-6 items-center justify-center">
-                <a href="#"
+                <a href="/cadastro"
                     class="bg-ocean-800 inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg">
                     Comece Agora
                     <i class="ml-2 fa-solid fa-arrow-right"></i>
                 </a>
-                <a href="#" class="font-medium text-ocean-100">
+                <a href="/sobre-nos" class="font-medium text-ocean-100">
                     Saiba Mais
                 </a>
             </div>
