@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class ProjetoController extends Controller
 {
     public function index(){
-        $projetos = Projeto::all();
+        $projetos = Projeto::with('ong')->get();
 
         return view('projetos', compact('projetos'));
     }
@@ -26,7 +26,7 @@ class ProjetoController extends Controller
      * Display the specified resource.
      */
     public function show(string $id) {
-        $projeto = Projeto::findOrFail($id);
+        $projeto = Projeto::with('ong')->findOrFail($id);
 
         return view('projeto-info', compact('projeto'));
     }

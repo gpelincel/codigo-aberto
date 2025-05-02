@@ -1,15 +1,15 @@
-<div class="flex justify-between items-center bg-ocean-800 rounded p-6 w-3/4">
+<div class="flex justify-between items-center bg-ocean-800 rounded-lg p-6 w-full">
     <div class="space-y-3 w-3/4">
         <div>
             <h1 class="uppercase text-2xl text-ocean-100 font-extrabold">{{$projeto->title}}</h1>
-            <p class="text-gray-500">Nome da ONG</p>
+            <a href="/ong/{{$projeto->ong->id}}" class="text-gray-500">{{$projeto->ong?->nome}}</a>
         </div>
         <p class="text-gray-400">{{$projeto->description}}</p>
-        <div class="w-1/2 flex flex-wrap gap-2">
+        {{-- <div class="w-1/2 flex flex-wrap gap-2">
             <x-projetos.category-pill :categoria="'Website'" />
             <x-projetos.category-pill :categoria="'SEO'" />
             <x-projetos.category-pill :categoria="'React'" />
-        </div>
+        </div> --}}
     </div>
     <div class="flex justify-center">
         <a href="/projetos/{{$projeto->id}}"

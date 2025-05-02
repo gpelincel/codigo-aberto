@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Projeto extends Model
 {
@@ -12,4 +13,8 @@ class Projeto extends Model
         'content',
         'id_ong'
     ];
+
+    public function ong(): BelongsTo{
+        return $this->belongsTo(ONG::class, 'id_ong');
+    }
 }

@@ -14,7 +14,7 @@ class ONGController extends Controller
     }
 
     public function show(string $id) {
-        $ong = ONG::findOrFail($id);
+        $ong = ONG::with('social_medias')->findOrFail($id);
 
         return view('ong-info', compact('ong'));
     }
