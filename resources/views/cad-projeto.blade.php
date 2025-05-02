@@ -8,8 +8,8 @@
         <script type="text/javascript" src="https://unpkg.com/trix@2.0.8/dist/trix.umd.min.js"></script>
     @endpush
 
-    <div class="min-h-screen bg-gray-900 text-white flex justify-center items-center p-8">
-        <div class="bg-gray-800 rounded-lg w-full max-w-3xl p-8 shadow-lg">
+    <div class="min-h-screen bg-ocean-900 text-white flex justify-center items-center p-8">
+        <div class="rounded-lg w-full max-w-3xl p-8 shadow-lg">
 
             <h2 class="text-3xl font-bold mb-6 uppercase">Cadastrar novo projeto</h2>
 

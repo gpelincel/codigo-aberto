@@ -3,7 +3,7 @@
         <div class="w-1/2 space-y-10">
             <!-- Cabeçalho -->
             <div class="flex flex-col items-center gap-4 mb-8">
-                <i class="fi fi-rr-user text-8xl"></i>
+                <img class="h-64 w-64" src="{{ 'https://ui-avatars.com/api/?name=' . urlencode(session($ong->nome)) }}" alt="">
                 <div>
                     <h1 class="text-2xl font-bold">{{ $ong->nome }}</h1>
                 </div>

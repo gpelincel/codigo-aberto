@@ -55,7 +55,7 @@ trix-toolbar .trix-button-group .trix-button:hover {
 
 /* Altera o fundo da toolbar inteira */
 trix-toolbar {
-    background-color: #1f2937; /* bg-gray-800 */
+    background-color: none; /* bg-gray-800 */
     border: none;
 }
 

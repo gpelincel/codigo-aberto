@@ -14,8 +14,8 @@ return new class extends Migration
         Schema::create('ongs', function (Blueprint $table) {
             $table->id();
             $table->string('nome');
-            $table->string('email');
-            $table->string('senha')->unique();
+            $table->string('email')->unique();
+            $table->string('senha');
             $table->string('telefone');
             $table->string('area_atuacao');
             $table->longText('descricao');

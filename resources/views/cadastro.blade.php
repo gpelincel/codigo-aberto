@@ -15,13 +15,13 @@
 </head>
 
 <body>
-    <main class="grid grid-cols-[2fr_1fr]">
-        <img class="h-full" src="/imgs/collaboration.jpg" alt="">
+    <main class="grid grid-cols-2 min-h-screen">
+        <img class="h-full object-cover" src="/imgs/collaboration.jpg" alt="">
         <div class="bg-ocean-900 text-white">
             <div class="flex items-center justify-center py-8 text-3xl">
                 <a class="text-center" href="/">{Código_Aberto}</a>
             </div>
-            <form class="space-y-6 p-8" action="/ong" method="POST">
+            <form class="grid grid-cols-2 gap-6 p-8" action="/ong" method="POST">
                 @csrf
                 <div>
                     <label for="nome" class="text-sm font-medium text-gray-300">Nome da ONG</label>
@@ -43,11 +43,11 @@
 
                 <div>
                     <label for="telefone" class="text-sm font-medium text-gray-300">Telefone</label>
-                    <input type="tel" name="telefone" id="telefone" required
-                        class="mt-1 w-full border-gray-500 border-b focus:outline-none">
+                    <input type="text" name="telefone" id="telefone" required
+                        class="mt-1 w-full border-gray-500 border-b focus:outline-none telefone-input">
                 </div>
 
-                <div class="text-white">
+                <div class="text-white col-span-2">
                     <label for="area_atuacao" class="text-sm text-gray-300">Área de Atuação</label>
                     <select id="area_atuacao" name="area_atuacao"
                         class="block py-2.5 px-0 w-full text-sm text-gray-500 bg-transparent border-0 border-b-1 border-gray-500 appearance-none focus:outline-none focus:ring-0 focus:border-gray-500 peer">
@@ -61,20 +61,20 @@
                     </select>
                 </div>
 
-                <div>
+                <div class="col-span-2">
                     <label for="descricao" class="text-sm font-medium text-gray-300">Descrição da ONG</label>
                     <textarea name="descricao" id="descricao" rows="4" class="mt-1 w-full border-b border-gray-500 focus:outline-none"
-                        placeholder="Fale brevemente sobre a missão e atividades da ONG..."></textarea>
+                        placeholder="Fale brevemente sobre a missão e atividades da ONG..." required></textarea>
                 </div>
 
-                <div>
-                    <input class="mt-2" type="checkbox" name="concordo" id="concordo">
+                <div class="col-span-2">
+                    <input class="mt-2" type="checkbox" name="concordo" id="concordo" required>
                     <label class="text-sm" for="">Eu li e concordo com a <a class="text-blue-500" href="/politica-privacidade">Política de Privacidade</a></label>
                 </div>
 
-                <div>
+                <div class="col-span-2">
                     <button type="submit"
-                        class="w-full inline-flex justify-center py-3 px-6 border border-transparent shadow-sm text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 uppercase">
+                        class="w-1/2 inline-flex justify-center py-3 px-6 border border-transparent shadow-sm text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 uppercase">
                         Inscrever-se
                     </button>
                 </div>

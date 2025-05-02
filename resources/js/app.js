@@ -1,3 +1,4 @@
+import IMask from "imask";
 import "./bootstrap";
 
 // Funções auxiliares
@@ -34,6 +35,12 @@ document.querySelectorAll(".modal").forEach((modal) => {
         if (e.target === modal) {
             closeModal(modal);
         }
+    });
+});
+
+document.querySelectorAll(".telefone-input").forEach((e) => {
+    IMask(e, {
+        mask: "(00) 9 0000-0000",
     });
 });
 
