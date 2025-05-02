@@ -15,6 +15,6 @@
         </div>
         <hr class="my-3 border-gray-800" />
         <span class="block text-sm sm:text-center">© 2025 <a href="https://flowbite.com/" class="hover:underline">Código
-                Aberto</a>. Todos os direitos reservados.</span>
+                Aberto (v1.0)</a>. Todos os direitos reservados.</span>
     </div>
 </footer>
