@@ -19,7 +19,7 @@ class ProjetoController extends Controller
     public function store(Request $request) {
         $projeto = Projeto::create($request->all());
 
-        return redirect()->back()->with('status', 'success')->with('message', 'Projeto cadastrado com sucesso!');
+        return redirect('projeto/'.$projeto->id)->with('status', 'success')->with('message', 'Projeto cadastrado com sucesso!');
     }
 
     /**

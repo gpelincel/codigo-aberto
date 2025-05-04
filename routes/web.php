@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\ONGController;
 use App\Http\Controllers\ProjetoController;
+use App\Http\Controllers\SocialMediaController;
+use App\Models\SocialMedia;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -32,6 +34,8 @@ Route::get('/projetos', [ProjetoController::class, 'index']);
 Route::get('/projetos/{id}', [ProjetoController::class, 'show']);
 Route::post('/projetos', [ProjetoController::class, 'store']);
 Route::put('/projetos', [ProjetoController::class, 'update']);
+
+Route::post('/redes-sociais', [SocialMediaController::class, 'store']);
 
 Route::get('/cadastrar-projeto', function (){
     return view('cad-projeto');

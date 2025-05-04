@@ -3,7 +3,8 @@
         <div class="w-1/2 space-y-10">
             <!-- Cabeçalho -->
             <div class="flex flex-col items-center gap-4 mb-8">
-                <img class="h-64 w-64 rounded-full" src="{{ 'https://ui-avatars.com/api/?name=' . urlencode($ong->nome) }}" alt="">
+                <img class="h-64 w-64 rounded-full"
+                    src="{{ 'https://ui-avatars.com/api/?name=' . urlencode($ong->nome) }}" alt="">
                 <div>
                     <h1 class="text-2xl font-bold">{{ $ong->nome }}</h1>
                 </div>
@@ -25,7 +26,7 @@
             <div>
                 <h2 class="text-xl font-semibold mb-2">Sobre a ONG</h2>
                 <p class="text-gray-400">
-                    {{ $ong->descricao }}
+                    {!! $ong->descricao !!}
                 </p>
             </div>
 
@@ -33,9 +34,11 @@
             <div>
                 <div class="flex items-center gap-6 mb-4">
                     <h2 class="text-xl font-semibold">Redes Sociais</h2>
-                    @if (session('user_id'))
-                    <button data-modal-target="modal-cad-rede"
-                        class="flex bg-ocean-700 border-ocean-700 hover:bg-ocean-800 transition-colors rounded-lg py-2 px-4 cursor-pointer w-fit"><i class="fi fi-rs-plus-small mr-1 text-lg"></i> <span>Adicionar rede social</span></button>
+                    @if (session('user_id') == $ong->id)
+                        <button data-modal-target="modal-cad-rede"
+                            class="flex bg-ocean-700 border-ocean-700 hover:bg-ocean-800 transition-colors rounded-lg py-2 px-4 cursor-pointer w-fit"><i
+                                class="fi fi-rs-plus-small mr-1 text-lg"></i> <span>Adicionar rede
+                                social</span></button>
                     @endif
                 </div>
                 <div class="flex flex-wrap gap-4">
@@ -48,9 +51,10 @@
             <div>
                 <div class="flex flex-col gap-2 mb-4">
                     <h2 class="text-xl font-semibold">Projetos Ativos</h2>
-                    @if (session('user_id'))
-                    <a href="/cadastrar-projeto"
-                        class="flex bg-ocean-700 border-ocean-700 hover:bg-ocean-800 transition-colors rounded-lg py-2 px-4 cursor-pointer w-fit"><i class="fi fi-rs-plus-small mr-1 text-lg"></i> <span>Adicionar projeto</span></a>
+                    @if (session('user_id') == $ong->id)
+                        <a href="/cadastrar-projeto"
+                            class="flex bg-ocean-700 border-ocean-700 hover:bg-ocean-800 transition-colors rounded-lg py-2 px-4 cursor-pointer w-fit"><i
+                                class="fi fi-rs-plus-small mr-1 text-lg"></i> <span>Adicionar projeto</span></a>
                     @endif
                 </div>
                 <div class="flex flex-col items-center space-y-4">
@@ -60,6 +64,10 @@
                 </div>
             </div>
         </div>
-
     </section>
+
+    @if (session('message'))
+        <x-toasts :status="session('status')" :message="session('message')"></x-toasts>
+    @endif
+    <x-ong.form-rede></x-ong.form-rede>
 </x-layouts.app>

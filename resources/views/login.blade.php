@@ -23,6 +23,11 @@
             </div>
             <form class="space-y-6 p-8" action="/login" method="POST">
                 @csrf
+                @if(session('status') == 'error')
+                <div class="bg-gray-200 p-4 rounded text-red-800">
+                    <h1><i class="fi fi-sr-circle-xmark mt-2"></i> {{session('message')}}</h1>
+                </div>
+                @endif
                 <div>
                     <label for="email" class="text-sm font-medium text-gray-300">Email</label>
                     <input type="email" name="email" id="email" required

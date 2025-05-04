@@ -29,6 +29,8 @@ class ONGController extends Controller {
             session(['user_id' => $usuario->id]);
             session(['username' => $usuario->nome]);
             return redirect('/ong/' . $usuario->id)->with('status', 'success')->with('message', 'ONG cadastrada com sucesso!');
+        } else {
+            return redirect()->back()->with('status', 'error')->with('message', 'Email e/ou senha incorretos!');
         }
     }
 }
