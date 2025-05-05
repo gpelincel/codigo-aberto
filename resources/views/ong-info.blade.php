@@ -1,6 +1,6 @@
 <x-layouts.app>
     <section class="flex flex-col items-center py-10 text-white bg-ocean-900">
-        <div class="w-1/2 space-y-10">
+        <div class="lg:w-1/2 space-y-10">
             <!-- Cabeçalho -->
             <div class="flex flex-col items-center gap-4 mb-8">
                 <img class="h-64 w-64 rounded-full"

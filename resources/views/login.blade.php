@@ -16,7 +16,7 @@
 </head>
 
 <body>
-    <main class="grid grid-cols-[2fr_1fr] min-h-screen">
+    <main class="grid lg:grid-cols-[2fr_1fr] min-h-screen">
         <img class="h-full" src="/imgs/collaboration.jpg" alt="">
         <div class="bg-ocean-900 text-white">
             <div class="flex items-center justify-center py-8 text-3xl">

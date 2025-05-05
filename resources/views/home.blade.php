@@ -1,5 +1,5 @@
 <x-layouts.app>
-    <section class="flex flex-col justify-center bg-hero min-h-screen">
+    <section class="flex flex-col justify-center bg-hero min-h-screen px-4">
         <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16">
             <h1 class="mb-4 text-4xl font-extrabold text-ocean-100">
                 Conectando Desenvolvedores Iniciantes a Oportunidades Reais</h1>

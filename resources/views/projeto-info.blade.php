@@ -1,6 +1,6 @@
 <x-layouts.app>
     <section class="flex flex-col items-center justify-center py-10 text-white bg-ocean-900 min-h-[80vh]">
-        <div class="w-1/2 space-y-10">
+        <div class="lg:w-1/2 space-y-10">
             <div>
                 <h1 class="uppercase text-3xl font-bold text-ocean-100">{{$projeto->title}}</h1>
             </div>

@@ -1,8 +1,8 @@
 <x-layouts.app>
-    <section class="bg-ocean-900 py-12">
-        <div class="flex flex-col items-center justify-center px-8 min-h-[70vh]">
+    <section class="bg-ocean-900 py-12 lg:px-0 px-4">
+        <div class="flex flex-col lg:items-center lg:justify-center lg:px-8 min-h-[70vh]">
             @if (count($projetos) > 0)
-                <div class="w-3/4 space-y-4">
+                <div class="lg:w-3/4 space-y-4">
                     @foreach ($projetos as $projeto)
                         <x-projetos.card :projeto="$projeto"></x-projetos.card>
                     @endforeach

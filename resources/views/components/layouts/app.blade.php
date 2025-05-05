@@ -16,7 +16,7 @@
     </head>
 <body>
     <x-navbar></x-navbar>
-    <main class="bg-ocean-800">
+    <main class="bg-ocean-900">
         {{ $slot }}
     </main>
     <x-footer></x-footer>
