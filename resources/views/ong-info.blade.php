@@ -1,5 +1,5 @@
 <x-layouts.app>
-    <section class="flex flex-col items-center py-10 text-white bg-ocean-900">
+    <section class="flex flex-col items-center py-10 text-white bg-ocean-900 lg:px-0 px-4">
         <div class="lg:w-1/2 space-y-10">
             <!-- Cabeçalho -->
             <div class="flex flex-col items-center gap-4 mb-8">
